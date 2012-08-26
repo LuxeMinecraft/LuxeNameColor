@@ -8,6 +8,51 @@ main: com.luxeminecraft.wildn00b.LuxeNameColor
 softdepend: [Vault]
 
 permissions:
-  prekick.show:
-    description: Allows to show the menu
+  luxenamecolor.black:
+    description: Changes the color of the name to black.
+    default: false
+  luxenamecolor.dark_blue:
+    description: Changes the color of the name to dark blue.
+    default: false
+  luxenamecolor.dark_green:
+    description: Changes the color of the name to dark green.
+    default: false
+  luxenamecolor.dark_cyan:
+    description: Changes the color of the name to dark cyan.
+    default: false
+  luxenamecolor.dark_red:
+    description: Changes the color of the name to dark red.
+    default: false
+  luxenamecolor.purple:
+    description: Changes the color of the name to purple.
+    default: false
+  luxenamecolor.gold:
+    description: Changes the color of the name to gold.
+    default: false
+  luxenamecolor.gray:
+    description: Changes the color of the name to gray.
+    default: false
+  luxenamecolor.dark_gray:
+    description: Changes the color of the name to dark gray.
+    default: false
+  luxenamecolor.blue:
+    description: Changes the color of the name to blue.
+    default: false
+  luxenamecolor.bright_green:
+    description: Changes the color of the name to bright green.
+    default: false
+  luxenamecolor.cyan:
+    description: Changes the color of the name to cyan.
+    default: false
+  luxenamecolor.red:
+    description: Changes the color of the name to red.
+    default: false
+  luxenamecolor.pink:
+    description: Changes the color of the name to pink.
+    default: false
+  luxenamecolor.yellow:
+    description: Changes the color of the name to yellow.
+    default: false
+  luxenamecolor.white:
+    description: Changes the color of the name to white.
     default: false
