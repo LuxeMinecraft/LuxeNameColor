@@ -1,0 +1,13 @@
+name: LuxeNameColor
+version: 1.0
+description: Changes the players name color based on permissions.
+author: WildN00b
+authors: [WildN00b] 
+website: http://www.mcfightcraft.com/
+main: com.luxeminecraft.wildn00b.LuxeNameColor
+softdepend: [Vault]
+
+permissions:
+  prekick.show:
+    description: Allows to show the menu
+    default: false
