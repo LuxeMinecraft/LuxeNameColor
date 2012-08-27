@@ -3,6 +3,7 @@ package com.luxeminecraft.wildn00b.luxenamecolor;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -10,6 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerLoginEvent.Result;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.kitteh.tag.PlayerReceiveNameTagEvent;
 
 public class LuxeNameColor extends JavaPlugin {
 
@@ -21,49 +23,46 @@ public class LuxeNameColor extends JavaPlugin {
 		permissions = new Permissions(this);
 
 		getServer().getPluginManager().registerEvents(new Listener() {
-			@SuppressWarnings("unused")
-			@EventHandler(priority = EventPriority.MONITOR)
-			public void OnLogin(PlayerLoginEvent event) {
-				if (event.getResult() == Result.ALLOWED) {
-					event.getPlayer().setDisplayName(getColor(event.getPlayer()) + event.getPlayer().getDisplayName());
-				}
+			@EventHandler(priority = EventPriority.LOW)
+			public void onNameTag(PlayerReceiveNameTagEvent event) {
+				event.setTag(getColor(event.getPlayer()) + event.getNamedPlayer().getName());
 			}
-
-			private String getColor(Player player) {
+			
+			private ChatColor getColor(Player player) {
 				if (permissions.HasPermissions(player, "luxenamecolor.black"))
-					return "\u00A70";
+					return ChatColor.BLACK;
 				else if (permissions.HasPermissions(player, "luxenamecolor.dark_blue"))
-					return "\u00A71";
+					return ChatColor.DARK_BLUE;
 				else if (permissions.HasPermissions(player, "luxenamecolor.dark_green"))
-					return "\u00A72";
-				else if (permissions.HasPermissions(player, "luxenamecolor.dark_cyan"))
-					return "\u00A73";
+					return ChatColor.DARK_GREEN;
+				else if (permissions.HasPermissions(player, "luxenamecolor.dark_aqua"))
+					return ChatColor.DARK_AQUA;
 				else if (permissions.HasPermissions(player, "luxenamecolor.dark_red"))
-					return "\u00A74";
-				else if (permissions.HasPermissions(player, "luxenamecolor.purple"))
-					return "\u00A75";
+					return ChatColor.DARK_RED;
+				else if (permissions.HasPermissions(player, "luxenamecolor.dark_purple"))
+					return ChatColor.DARK_PURPLE;
 				else if (permissions.HasPermissions(player, "luxenamecolor.gold"))
-					return "\u00A76";
+					return ChatColor.GOLD;
 				else if (permissions.HasPermissions(player, "luxenamecolor.gray"))
-					return "\u00A77";
+					return ChatColor.GRAY;
 				else if (permissions.HasPermissions(player, "luxenamecolor.dark_gray"))
-					return "\u00A78";
+					return ChatColor.DARK_GRAY;
 				else if (permissions.HasPermissions(player, "luxenamecolor.blue"))
-					return "\u00A79";
-				else if (permissions.HasPermissions(player, "luxenamecolor.bright_green"))
-					return "\u00A7a";
+					return ChatColor.BLUE;
+				else if (permissions.HasPermissions(player, "luxenamecolor.green"))
+					return ChatColor.GREEN;
 				else if (permissions.HasPermissions(player, "luxenamecolor.cyan"))
-					return "\u00A7b";
+					return ChatColor.AQUA;
 				else if (permissions.HasPermissions(player, "luxenamecolor.red"))
-					return "\u00A7c";
-				else if (permissions.HasPermissions(player, "luxenamecolor.pink"))
-					return "\u00A7d";
+					return ChatColor.RED;
+				else if (permissions.HasPermissions(player, "luxenamecolor.light_purple"))
+					return ChatColor.LIGHT_PURPLE;
 				else if (permissions.HasPermissions(player, "luxenamecolor.yellow"))
-					return "\u00A7e";
+					return ChatColor.YELLOW;
 				else if (permissions.HasPermissions(player, "luxenamecolor.white"))
-					return "\u00A7f";
+					return ChatColor.WHITE;
 				else
-					return "";
+					return ChatColor.RESET;
 			}
 		}, this);
 		log.log(Level.INFO, "[LuxeNameColor] Initialized successfully.");

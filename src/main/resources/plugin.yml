@@ -4,7 +4,7 @@ description: Changes the players name color based on permissions.
 author: WildN00b
 authors: [WildN00b] 
 website: http://www.mcfightcraft.com/
-main: com.luxeminecraft.wildn00b.LuxeNameColor
+main: com.luxeminecraft.wildn00b.luxenamecolor.LuxeNameColor
 softdepend: [Vault]
 
 permissions:
@@ -17,14 +17,14 @@ permissions:
   luxenamecolor.dark_green:
     description: Changes the color of the name to dark green.
     default: false
-  luxenamecolor.dark_cyan:
-    description: Changes the color of the name to dark cyan.
+  luxenamecolor.dark_aqua:
+    description: Changes the color of the name to dark aqua.
     default: false
   luxenamecolor.dark_red:
     description: Changes the color of the name to dark red.
     default: false
-  luxenamecolor.purple:
-    description: Changes the color of the name to purple.
+  luxenamecolor.dark_purple:
+    description: Changes the color of the name to dark purple.
     default: false
   luxenamecolor.gold:
     description: Changes the color of the name to gold.
@@ -38,17 +38,17 @@ permissions:
   luxenamecolor.blue:
     description: Changes the color of the name to blue.
     default: false
-  luxenamecolor.bright_green:
-    description: Changes the color of the name to bright green.
+  luxenamecolor.green:
+    description: Changes the color of the name to green.
     default: false
-  luxenamecolor.cyan:
-    description: Changes the color of the name to cyan.
+  luxenamecolor.aqua:
+    description: Changes the color of the name to aqua.
     default: false
   luxenamecolor.red:
     description: Changes the color of the name to red.
     default: false
-  luxenamecolor.pink:
-    description: Changes the color of the name to pink.
+  luxenamecolor.light_purple:
+    description: Changes the color of the name to light purple.
     default: false
   luxenamecolor.yellow:
     description: Changes the color of the name to yellow.
