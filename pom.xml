@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.luxeminecraft.wildn00b</groupId>
   <artifactId>luxenamecolor</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>LuxeNameColor</name>
   <description>Changes the players name color based on permissions.</description>
   <repositories>
